@@ -1,5 +1,6 @@
 import { Facebook, Linkedin, Instagram, ArrowUp } from "lucide-react";
 import Logo from "./Logo";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -31,20 +32,20 @@ export default function Footer() {
           <div>
             <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Navigation</h4>
             <ul className="space-y-4 text-white/40">
-              <li><a href="#" className="hover:text-brand-red transition-colors">Accueil</a></li>
-              <li><a href="#about" className="hover:text-brand-red transition-colors">À Propos</a></li>
-              <li><a href="#solutions" className="hover:text-brand-red transition-colors">Solutions</a></li>
-              <li><a href="#achievements" className="hover:text-brand-red transition-colors">Réalisations</a></li>
+              <li><Link to="/" className="hover:text-brand-red transition-colors">Accueil</Link></li>
+              <li><Link to="/#about" className="hover:text-brand-red transition-colors">À Propos</Link></li>
+              <li><Link to="/#solutions" className="hover:text-brand-red transition-colors">Solutions</Link></li>
+              <li><Link to="/blog" className="hover:text-brand-red transition-colors">Blog</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Services</h4>
             <ul className="space-y-4 text-white/40">
-              <li><a href="#" className="hover:text-brand-red transition-colors">Conception CAO</a></li>
-              <li><a href="#" className="hover:text-brand-red transition-colors">Fabrication</a></li>
-              <li><a href="#" className="hover:text-brand-red transition-colors">Service Après-Vente</a></li>
-              <li><a href="#" className="hover:text-brand-red transition-colors">Conseil Technique</a></li>
+              <li><Link to="/#solutions" className="hover:text-brand-red transition-colors">Conception CAO</Link></li>
+              <li><Link to="/#solutions" className="hover:text-brand-red transition-colors">Fabrication</Link></li>
+              <li><Link to="/#solutions" className="hover:text-brand-red transition-colors">Service Après-Vente</Link></li>
+              <li><Link to="/#solutions" className="hover:text-brand-red transition-colors">Conseil Technique</Link></li>
             </ul>
           </div>
 

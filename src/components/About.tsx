@@ -55,30 +55,36 @@ export default function About() {
               className="space-y-4"
             >
               <img 
-                src="https://picsum.photos/seed/industrial-factory-1/400/500" 
-                alt="Factory" 
-                className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                src="https://i.postimg.cc/YCvpTj2S/1.webp" 
+                alt="ORA PACK Factory 1" 
+                className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-[4/5] object-cover shadow-2xl"
                 referrerPolicy="no-referrer"
               />
               <div className="bg-brand-red p-6 rounded-2xl">
                 <div className="text-4xl font-black mb-1">95%</div>
                 <div className="text-xs uppercase tracking-widest opacity-80">Délais Respectés</div>
               </div>
+              <img 
+                src="https://i.postimg.cc/JzS18mt8/3.webp" 
+                alt="ORA PACK Factory 3" 
+                className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-square object-cover shadow-2xl"
+                referrerPolicy="no-referrer"
+              />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="space-y-4 mt-8"
+              className="space-y-4 mt-12"
             >
               <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
                 <div className="text-4xl font-black mb-1">100%</div>
                 <div className="text-xs uppercase tracking-widest opacity-80">Fiabilité Partenaire</div>
               </div>
               <img 
-                src="https://picsum.photos/seed/industrial-factory-2/400/500" 
-                alt="Factory" 
-                className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                src="https://i.postimg.cc/sgbVzy1r/2.webp" 
+                alt="ORA PACK Factory 2" 
+                className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-[4/6] object-cover shadow-2xl"
                 referrerPolicy="no-referrer"
               />
             </motion.div>
