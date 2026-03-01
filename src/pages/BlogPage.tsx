@@ -15,6 +15,10 @@ export default function BlogPage() {
         <title>Blog ORA PACK | Actualités Packaging & Industrie au Maroc</title>
         <meta name="description" content="Suivez les dernières tendances du packaging, de l'automatisation industrielle et de l'innovation technologique au Maroc avec les experts d'ORA PACK." />
         <link rel="canonical" href="https://orapack.ma/blog" />
+        <meta property="og:title" content="Blog ORA PACK | Actualités Packaging & Industrie au Maroc" />
+        <meta property="og:description" content="Suivez les dernières tendances du packaging, de l'automatisation industrielle et de l'innovation technologique au Maroc." />
+        <meta property="og:image" content="https://i.postimg.cc/sgbVzy1r/2.webp" />
+        <meta property="og:type" content="website" />
       </Helmet>
       <div className="bg-brand-black py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E31E24_1px,transparent_1px)] [background-size:40px_40px]"></div>

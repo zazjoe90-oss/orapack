@@ -17,6 +17,7 @@ export default function Home() {
         <link rel="canonical" href="https://orapack.ma/" />
         <meta property="og:title" content="ORA PACK | Solutions d'Emballage Automatiques au Maroc" />
         <meta property="og:description" content="Découvrez nos solutions de packaging innovantes fabriquées au Maroc. Performance et précision pour votre production." />
+        <meta property="og:image" content="https://i.postimg.cc/YCvpTj2S/1.webp" />
         <meta property="og:type" content="website" />
       </Helmet>
       <Hero />

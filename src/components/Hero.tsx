@@ -91,31 +91,35 @@ export default function Hero() {
               EST ICI.
             </h1>
             
-            <motion.div
+            <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
+              className="text-xl text-white/50 mb-12 max-w-xl font-light leading-relaxed"
             >
-              <p className="text-xl text-white/50 mb-12 max-w-xl font-light leading-relaxed">
-                Propulsez votre production avec nos <span className="text-white font-medium">Ensacheuses Verticales</span> de nouvelle génération. Performance marocaine, standards internationaux.
-              </p>
+              Propulsez votre production avec nos <span className="text-white font-medium">Ensacheuses Verticales</span> de nouvelle génération. Performance marocaine, standards internationaux.
+            </motion.p>
 
-              <div className="flex flex-wrap gap-5">
-                <motion.button 
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-brand-red text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 shadow-2xl shadow-brand-red/20 group"
-                >
-                  Explorer nos Machines <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-                </motion.button>
-                <motion.button 
-                  onClick={() => setIsVideoOpen(true)}
-                  whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
-                  className="border border-white/20 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 backdrop-blur-sm"
-                >
-                  <Play size={20} className="fill-brand-red text-brand-red" /> Voir en Action
-                </motion.button>
-              </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-wrap gap-5"
+            >
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-brand-red text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 shadow-2xl shadow-brand-red/20 group"
+              >
+                Explorer nos Machines <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+              </motion.button>
+              <motion.button 
+                onClick={() => setIsVideoOpen(true)}
+                whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                className="border border-white/20 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 backdrop-blur-sm"
+              >
+                <Play size={20} className="fill-brand-red text-brand-red" /> Voir en Action
+              </motion.button>
             </motion.div>
 
             <div className="mt-16 grid grid-cols-3 gap-10 border-t border-white/10 pt-10">
@@ -128,7 +132,7 @@ export default function Hero() {
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 + i * 0.1 }}
+                  transition={{ delay: 0.4 + i * 0.1 }}
                 >
                   <div className="text-4xl font-black text-white mb-1">
                     <Counter value={stat.val} suffix={stat.suffix} />
@@ -137,7 +141,7 @@ export default function Hero() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
@@ -175,6 +179,7 @@ export default function Hero() {
                     alt="Ensacheuse Verticale Orapack" 
                     className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
                     referrerPolicy="no-referrer"
+                    fetchPriority={currentImage === 0 ? "high" : "auto"}
                   />
                 </AnimatePresence>
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>
