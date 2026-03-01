@@ -35,7 +35,7 @@ export default function BlogPage() {
           </p>
         </div>
       </div>
-      <Blog />
+      <Blog showAllButton={false} />
     </div>
   );
 }

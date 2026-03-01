@@ -44,7 +44,7 @@ export default function Navbar() {
                 key={link.name}
                 to={link.href}
                 className={`text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
-                  location.pathname === link.href ? "text-brand-red" : ""
+                  location.pathname === link.href || (link.href === "/blog" && location.pathname.startsWith("/blog")) ? "text-brand-red" : ""
                 }`}
               >
                 {link.name}

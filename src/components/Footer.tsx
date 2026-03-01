@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Instagram, ArrowUp } from "lucide-react";
+import { Facebook, Linkedin, Instagram, ArrowUp, MapPin, Phone, Clock } from "lucide-react";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ export default function Footer() {
               N°1 au Maroc en fabrication de machines d’emballage automatiques. Spécialiste des ensacheuses verticales depuis 2020.
             </p>
             <div className="flex gap-4">
-              <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all">
+              <a href="https://web.facebook.com/Orapack.sarl/?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all">
                 <Facebook size={18} />
               </a>
               <a href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all">
@@ -50,22 +50,23 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Newsletter</h4>
-            <p className="text-white/40 text-sm mb-4">Restez informé de nos dernières innovations.</p>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Votre email"
-                aria-label="Votre adresse email pour la newsletter"
-                className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm outline-none focus:border-brand-red w-full"
-              />
-              <button 
-                aria-label="S'inscrire à la newsletter"
-                className="bg-brand-red px-4 py-2 rounded-lg hover:bg-white hover:text-brand-black transition-all"
-              >
-                OK
-              </button>
-            </div>
+            <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Contact</h4>
+            <ul className="space-y-4 text-white/40 text-sm">
+              <li className="flex items-start gap-3">
+                <MapPin size={16} className="text-brand-red shrink-0" />
+                <span>Tit Mellil, Casablanca, Maroc</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg className="w-4 h-4 text-brand-red shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                <a href="https://wa.me/212661876491" target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors">+212 661-876491</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Clock size={16} className="text-brand-red shrink-0" />
+                <span>Lun - Sam : 8h - 18h</span>
+              </li>
+            </ul>
           </div>
         </div>
 

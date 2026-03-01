@@ -106,13 +106,14 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="flex flex-wrap gap-5"
             >
-              <motion.button 
+              <motion.a 
+                href="#solutions"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-brand-red text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 shadow-2xl shadow-brand-red/20 group"
               >
                 Explorer nos Machines <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-              </motion.button>
+              </motion.a>
               <motion.button 
                 onClick={() => setIsVideoOpen(true)}
                 whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
@@ -179,7 +180,6 @@ export default function Hero() {
                     alt="Ensacheuse Verticale Orapack" 
                     className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
                     referrerPolicy="no-referrer"
-                    fetchPriority={currentImage === 0 ? "high" : "auto"}
                   />
                 </AnimatePresence>
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>

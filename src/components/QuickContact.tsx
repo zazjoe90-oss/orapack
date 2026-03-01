@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { MessageCircle, X, Phone, Mail, Send } from "lucide-react";
+import { MessageCircle, X, Phone, Mail, Send, Facebook } from "lucide-react";
 import { useState } from "react";
 
 export default function QuickContact() {
@@ -26,13 +26,25 @@ export default function QuickContact() {
             </div>
             
             <div className="p-6 space-y-4">
-              <a href="tel:+212500000000" className="flex items-center gap-4 p-4 rounded-2xl bg-black/5 hover:bg-brand-red hover:text-white transition-all group">
+              <a href="https://wa.me/212661876491" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-black/5 hover:bg-brand-red hover:text-white transition-all group">
                 <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-red group-hover:bg-white/20 group-hover:text-white">
-                  <Phone size={20} />
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                  </svg>
                 </div>
                 <div>
-                  <div className="text-[10px] font-bold uppercase tracking-widest opacity-60">Appelez-nous</div>
-                  <div className="font-bold">+212 5XX XX XX XX</div>
+                  <div className="text-[10px] font-bold uppercase tracking-widest opacity-60">WhatsApp</div>
+                  <div className="font-bold">+212 661-876491</div>
+                </div>
+              </a>
+
+              <a href="https://web.facebook.com/Orapack.sarl/?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-black/5 hover:bg-brand-red hover:text-white transition-all group">
+                <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-red group-hover:bg-white/20 group-hover:text-white">
+                  <Facebook size={20} />
+                </div>
+                <div>
+                  <div className="text-[10px] font-bold uppercase tracking-widest opacity-60">Facebook</div>
+                  <div className="font-bold">Orapack SARL</div>
                 </div>
               </a>
               
@@ -64,7 +76,13 @@ export default function QuickContact() {
           isOpen ? "bg-brand-black text-white" : "bg-brand-red text-white"
         }`}
       >
-        {isOpen ? <X size={28} /> : <MessageCircle size={28} />}
+        {isOpen ? (
+          <X size={28} />
+        ) : (
+          <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          </svg>
+        )}
       </motion.button>
     </div>
   );

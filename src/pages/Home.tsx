@@ -4,6 +4,7 @@ import Features from "../components/Features";
 import Process from "../components/Process";
 import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
+import Blog from "../components/Blog";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 
@@ -117,6 +118,8 @@ export default function Home() {
       <Process />
       <Achievements />
       
+      <Blog limit={3} />
+
       {/* Interactive Stats Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
