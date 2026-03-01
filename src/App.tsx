@@ -1,0 +1,167 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import About from "./components/About";
+import Achievements from "./components/Achievements";
+import Process from "./components/Process";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import QuickContact from "./components/QuickContact";
+import { motion, useScroll, useSpring } from "motion/react";
+
+export default function App() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  return (
+    <div className="min-h-screen selection:bg-brand-red selection:text-white bg-white">
+      {/* Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-brand-red z-[60] origin-left"
+        style={{ scaleX }}
+      />
+
+      <Navbar />
+      
+      <main>
+        <Hero />
+        
+        {/* Trusted By Section (Enhanced) */}
+        <section className="py-24 bg-white border-y border-black/5 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col items-center mb-16">
+              <motion.div 
+                initial={{ width: 0 }}
+                whileInView={{ width: "80px" }}
+                viewport={{ once: true }}
+                className="h-1 bg-brand-red mb-6"
+              />
+              <h2 className="text-center text-2xl md:text-3xl font-black text-brand-black uppercase tracking-tighter">
+                NOS PARTENAIRES <span className="text-brand-red">STRATÉGIQUES</span>
+              </h2>
+              <p className="text-[10px] font-bold text-black/40 uppercase tracking-[0.4em] mt-2">Ils nous font confiance</p>
+            </div>
+            <div className="relative overflow-hidden py-8 bg-brand-black/[0.02] rounded-[3rem]">
+              {/* Side Fades */}
+              <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
+              <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+              
+              <motion.div 
+                animate={{ x: ["0%", "-33.333%"] }}
+                transition={{ 
+                  duration: 20, 
+                  repeat: Infinity, 
+                  ease: "linear" 
+                }}
+                className="flex items-center whitespace-nowrap"
+              >
+                {[...Array(3)].map((_, groupIndex) => (
+                  <div key={groupIndex} className="flex items-center">
+                    {[
+                      "https://i.postimg.cc/28vbMH03/L1.jpg",
+                      "https://i.postimg.cc/SN823ZgR/L2.jpg",
+                      "https://i.postimg.cc/RVf6yPg3/L3.jpg",
+                      "https://i.postimg.cc/GhY8VMX4/L4.jpg",
+                      "https://i.postimg.cc/Fscd8PTk/L5-1.jpg",
+                      "https://i.postimg.cc/02mMFtVw/L6.jpg"
+                    ].map((url, i) => (
+                      <motion.div 
+                        key={`${groupIndex}-${i}`} 
+                        whileHover={{ scale: 1.05, y: -8 }}
+                        className="w-64 h-40 flex items-center justify-center transition-all flex-shrink-0 bg-white rounded-3xl shadow-lg shadow-black/[0.02] border border-black/[0.05] mx-6 p-8"
+                      >
+                        <img 
+                          src={url} 
+                          alt="Partenaire" 
+                          className="max-w-full max-h-full object-contain transition-all duration-500"
+                          referrerPolicy="no-referrer"
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <About />
+        <Features />
+        <Process />
+        <Achievements />
+        
+        {/* Interactive Stats Section */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+              {[
+                { label: "Années d'Expérience", val: "15+" },
+                { label: "Machines Installées", val: "1200+" },
+                { label: "Techniciens Experts", val: "45" },
+                { label: "Satisfaction Client", val: "99%" },
+              ].map((stat, i) => (
+                <motion.div 
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-5xl md:text-6xl font-black text-brand-black mb-2 tracking-tighter">{stat.val}</div>
+                  <div className="text-[10px] text-brand-red font-black uppercase tracking-[0.3em]">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section (Enhanced) */}
+        <section className="py-32 bg-brand-red relative overflow-hidden">
+          <motion.div 
+            animate={{ rotate: 360 }}
+            transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+            className="absolute -top-64 -right-64 w-[600px] h-[600px] border border-white/10 rounded-full"
+          />
+          <motion.div 
+            animate={{ rotate: -360 }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            className="absolute -bottom-32 -left-32 w-[400px] h-[400px] border border-white/10 rounded-full"
+          />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white tracking-tighter mb-10 leading-[0.9]"
+            >
+              VOTRE RÉUSSITE <br />
+              COMMENCE <span className="text-brand-black">ICI.</span>
+            </motion.h2>
+            <p className="text-white/80 text-xl mb-12 max-w-2xl mx-auto font-light">
+              Ne laissez pas votre production au hasard. Choisissez la précision, choisissez ORA PACK.
+            </p>
+            <motion.a 
+              href="#contact"
+              whileHover={{ scale: 1.05, backgroundColor: "#1A1A1A", color: "#FFFFFF" }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-white text-brand-red px-16 py-6 rounded-full font-black uppercase tracking-[0.2em] shadow-2xl transition-all"
+            >
+              Démarrer un Projet
+            </motion.a>
+          </div>
+        </section>
+
+        <Contact />
+      </main>
+
+      <Footer />
+      <QuickContact />
+    </div>
+  );
+}
