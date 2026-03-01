@@ -120,32 +120,6 @@ export default function Home() {
       
       <Blog limit={3} />
 
-      {/* Interactive Stats Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
-            {[
-              { label: "Années d'Expérience", val: "15+" },
-              { label: "Machines Installées", val: "1200+" },
-              { label: "Techniciens Experts", val: "45" },
-              { label: "Satisfaction Client", val: "99%" },
-            ].map((stat, i) => (
-              <motion.div 
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-5xl md:text-6xl font-black text-brand-black mb-2 tracking-tighter">{stat.val}</div>
-                <div className="text-[10px] text-brand-red font-black uppercase tracking-[0.3em]">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section (Enhanced) */}
       <section className="py-32 bg-brand-red relative overflow-hidden">
         <motion.div 
