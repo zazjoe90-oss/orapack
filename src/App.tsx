@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import QuickContact from "./components/QuickContact";
 import Home from "./pages/Home";
 import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
 import { motion, useScroll, useSpring } from "motion/react";
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>
         </main>
 

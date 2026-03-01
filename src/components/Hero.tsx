@@ -69,16 +69,11 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-20"
-          >
+          <div className="relative z-20">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.1 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold uppercase tracking-widest mb-8 backdrop-blur-sm"
             >
               <Sparkles className="text-brand-red w-4 h-4 animate-pulse" />
@@ -96,26 +91,32 @@ export default function Hero() {
               EST ICI.
             </h1>
             
-            <p className="text-xl text-white/50 mb-12 max-w-xl font-light leading-relaxed">
-              Propulsez votre production avec nos <span className="text-white font-medium">Ensacheuses Verticales</span> de nouvelle génération. Performance marocaine, standards internationaux.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <p className="text-xl text-white/50 mb-12 max-w-xl font-light leading-relaxed">
+                Propulsez votre production avec nos <span className="text-white font-medium">Ensacheuses Verticales</span> de nouvelle génération. Performance marocaine, standards internationaux.
+              </p>
 
-            <div className="flex flex-wrap gap-5">
-              <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-brand-red text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 shadow-2xl shadow-brand-red/20 group"
-              >
-                Explorer nos Machines <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-              </motion.button>
-              <motion.button 
-                onClick={() => setIsVideoOpen(true)}
-                whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
-                className="border border-white/20 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 backdrop-blur-sm"
-              >
-                <Play size={20} className="fill-brand-red text-brand-red" /> Voir en Action
-              </motion.button>
-            </div>
+              <div className="flex flex-wrap gap-5">
+                <motion.button 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-brand-red text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 shadow-2xl shadow-brand-red/20 group"
+                >
+                  Explorer nos Machines <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                </motion.button>
+                <motion.button 
+                  onClick={() => setIsVideoOpen(true)}
+                  whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                  className="border border-white/20 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 backdrop-blur-sm"
+                >
+                  <Play size={20} className="fill-brand-red text-brand-red" /> Voir en Action
+                </motion.button>
+              </div>
+            </motion.div>
 
             <div className="mt-16 grid grid-cols-3 gap-10 border-t border-white/10 pt-10">
               {[
