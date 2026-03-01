@@ -63,6 +63,8 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-brand-black"
+              aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={isOpen}
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>

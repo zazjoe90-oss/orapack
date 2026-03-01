@@ -17,13 +17,13 @@ export default function Footer() {
               N°1 au Maroc en fabrication de machines d’emballage automatiques. Spécialiste des ensacheuses verticales depuis 2020.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all">
+              <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all">
+              <a href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all">
+              <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all">
                 <Instagram size={18} />
               </a>
             </div>
@@ -56,9 +56,13 @@ export default function Footer() {
               <input 
                 type="email" 
                 placeholder="Votre email"
+                aria-label="Votre adresse email pour la newsletter"
                 className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm outline-none focus:border-brand-red w-full"
               />
-              <button className="bg-brand-red px-4 py-2 rounded-lg hover:bg-white hover:text-brand-black transition-all">
+              <button 
+                aria-label="S'inscrire à la newsletter"
+                className="bg-brand-red px-4 py-2 rounded-lg hover:bg-white hover:text-brand-black transition-all"
+              >
                 OK
               </button>
             </div>

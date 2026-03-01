@@ -82,6 +82,7 @@ export default function Blog() {
                 <img 
                   src={post.image} 
                   alt={post.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                   referrerPolicy="no-referrer"
                 />
@@ -113,7 +114,10 @@ export default function Blog() {
                 </p>
                 
                 <div className="pt-6 border-t border-black/5">
-                  <button className="flex items-center gap-2 text-brand-red font-black uppercase tracking-widest text-xs group/btn">
+                  <button 
+                    aria-label={`Lire l'article : ${post.title}`}
+                    className="flex items-center gap-2 text-brand-red font-black uppercase tracking-widest text-xs group/btn"
+                  >
                     Lire l'article <ArrowRight size={16} className="group-hover/btn:translate-x-2 transition-transform" />
                   </button>
                 </div>
@@ -123,7 +127,10 @@ export default function Blog() {
         </div>
 
         <div className="mt-16 text-center">
-          <button className="bg-brand-black text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-brand-red transition-all shadow-2xl shadow-black/10">
+          <button 
+            aria-label="Voir tous les articles du blog"
+            className="bg-brand-black text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-brand-red transition-all shadow-2xl shadow-black/10"
+          >
             Voir tous les articles
           </button>
         </div>

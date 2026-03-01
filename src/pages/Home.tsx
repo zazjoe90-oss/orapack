@@ -5,10 +5,20 @@ import Process from "../components/Process";
 import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>ORA PACK | N°1 du Packaging au Maroc - Ensacheuses Verticales</title>
+        <meta name="description" content="ORA PACK est le leader marocain de la fabrication de machines d'emballage automatiques. Spécialiste des ensacheuses verticales, peseuses et lignes de conditionnement à Casablanca." />
+        <meta name="keywords" content="packaging maroc, emballage maroc, ensacheuse verticale, machine emballage casablanca, ORA PACK, conditionnement automatique" />
+        <link rel="canonical" href="https://orapack.ma/" />
+        <meta property="og:title" content="ORA PACK | Solutions d'Emballage Automatiques au Maroc" />
+        <meta property="og:description" content="Découvrez nos solutions de packaging innovantes fabriquées au Maroc. Performance et précision pour votre production." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Hero />
       
       {/* Trusted By Section (Enhanced) */}

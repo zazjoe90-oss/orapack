@@ -36,7 +36,10 @@ export default function About() {
                 ))}
               </div>
 
-              <button className="bg-white text-brand-black px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-brand-red hover:text-white transition-all">
+              <button 
+                aria-label="En savoir plus sur ORA PACK"
+                className="bg-white text-brand-black px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-brand-red hover:text-white transition-all"
+              >
                 En savoir plus
               </button>
             </motion.div>
@@ -56,7 +59,8 @@ export default function About() {
             >
               <img 
                 src="https://i.postimg.cc/YCvpTj2S/1.webp" 
-                alt="ORA PACK Factory 1" 
+                alt="Usine ORA PACK - Vue 1" 
+                loading="lazy"
                 className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-[4/5] object-cover shadow-2xl"
                 referrerPolicy="no-referrer"
               />
@@ -66,7 +70,8 @@ export default function About() {
               </div>
               <img 
                 src="https://i.postimg.cc/JzS18mt8/3.webp" 
-                alt="ORA PACK Factory 3" 
+                alt="Usine ORA PACK - Vue 3" 
+                loading="lazy"
                 className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-square object-cover shadow-2xl"
                 referrerPolicy="no-referrer"
               />
@@ -83,7 +88,8 @@ export default function About() {
               </div>
               <img 
                 src="https://i.postimg.cc/sgbVzy1r/2.webp" 
-                alt="ORA PACK Factory 2" 
+                alt="Usine ORA PACK - Vue 2" 
+                loading="lazy"
                 className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-[4/6] object-cover shadow-2xl"
                 referrerPolicy="no-referrer"
               />
