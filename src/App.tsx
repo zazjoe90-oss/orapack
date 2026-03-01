@@ -31,9 +31,9 @@ export default function App() {
         <Hero />
         
         {/* Trusted By Section (Enhanced) */}
-        <section className="py-24 bg-white border-y border-black/5 overflow-hidden">
+        <section className="py-12 bg-white border-y border-black/5 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex flex-col items-center mb-16">
+            <div className="flex flex-col items-center mb-8">
               <motion.div 
                 initial={{ width: 0 }}
                 whileInView={{ width: "80px" }}
@@ -45,7 +45,7 @@ export default function App() {
               </h2>
               <p className="text-[10px] font-bold text-black/40 uppercase tracking-[0.4em] mt-2">Ils nous font confiance</p>
             </div>
-            <div className="relative overflow-hidden py-8 bg-brand-black/[0.02] rounded-[3rem]">
+            <div className="relative overflow-hidden py-8 bg-brand-black/[0.02] rounded-[4rem]">
               {/* Side Fades */}
               <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
               <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
@@ -71,8 +71,8 @@ export default function App() {
                     ].map((url, i) => (
                       <motion.div 
                         key={`${groupIndex}-${i}`} 
-                        whileHover={{ scale: 1.05, y: -8 }}
-                        className="w-64 h-40 flex items-center justify-center transition-all flex-shrink-0 bg-white rounded-3xl shadow-lg shadow-black/[0.02] border border-black/[0.05] mx-6 p-8"
+                        whileHover={{ scale: 1.05, y: -12 }}
+                        className="w-[32rem] h-80 flex items-center justify-center transition-all flex-shrink-0 bg-white rounded-[3rem] shadow-xl shadow-black/[0.03] border border-black/[0.06] mx-8 p-4"
                       >
                         <img 
                           src={url} 
