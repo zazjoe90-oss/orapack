@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Features from "../components/Features";
+import Applications from "../components/Applications";
 import Process from "../components/Process";
 import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
@@ -84,6 +85,7 @@ export default function Home() {
 
       <About />
       <Features />
+      <Applications />
       
       {/* Video Demonstration Section */}
       <section className="py-24 bg-white overflow-hidden">

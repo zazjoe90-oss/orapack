@@ -33,9 +33,10 @@ export default function Footer() {
             <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Navigation</h4>
             <ul className="space-y-4 text-white/40">
               <li><Link to="/" className="hover:text-brand-red transition-colors">Accueil</Link></li>
-              <li><Link to="/#about" className="hover:text-brand-red transition-colors">À Propos</Link></li>
-              <li><Link to="/#solutions" className="hover:text-brand-red transition-colors">Solutions</Link></li>
-              <li><Link to="/blog" className="hover:text-brand-red transition-colors">Blog</Link></li>
+              <li><Link to="/#ensacheuse" className="hover:text-brand-red transition-colors">Ensacheuse</Link></li>
+              <li><Link to="/#remplisseuse" className="hover:text-brand-red transition-colors">Remplisseuse</Link></li>
+              <li><Link to="/#accessoire" className="hover:text-brand-red transition-colors">Accessoire</Link></li>
+              <li><Link to="/#contact" className="hover:text-brand-red transition-colors">Contact</Link></li>
             </ul>
           </div>
 
