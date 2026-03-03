@@ -25,7 +25,7 @@ const achievements = [
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-24 bg-white">
+    <section id="accessoire" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>

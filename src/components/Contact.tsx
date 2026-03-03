@@ -17,61 +17,9 @@ export default function Contact() {
             </p>
 
             <div className="space-y-8">
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-brand-red/10 text-brand-red rounded-xl flex items-center justify-center shrink-0">
-                  <MapPin size={24} />
-                </div>
-                <div>
-                  <div className="font-bold uppercase tracking-wider text-sm mb-1">Adresse</div>
-                  <p className="text-brand-black/60">Tit Mellil, Casablanca, Maroc</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-brand-red/10 text-brand-red rounded-xl flex items-center justify-center shrink-0">
-                  <Mail size={24} />
-                </div>
-                <div>
-                  <div className="font-bold uppercase tracking-wider text-sm mb-1">Email</div>
-                  <p className="text-brand-black/60">contact@orapack.ma</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-brand-red/10 text-brand-red rounded-xl flex items-center justify-center shrink-0">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-bold uppercase tracking-wider text-sm mb-1">WhatsApp</div>
-                  <p className="text-brand-black/60">+212 661-876491</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-brand-red/10 text-brand-red rounded-xl flex items-center justify-center shrink-0">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-bold uppercase tracking-wider text-sm mb-1">Facebook</div>
-                  <a href="https://web.facebook.com/Orapack.sarl/?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" className="text-brand-black/60 hover:text-brand-red transition-colors">Orapack SARL</a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-brand-red/10 text-brand-red rounded-xl flex items-center justify-center shrink-0">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-bold uppercase tracking-wider text-sm mb-1">Horaires</div>
-                  <p className="text-brand-black/60">Lundi - Samedi : 8h00 - 18h00</p>
-                </div>
-              </div>
+              <p className="text-brand-black/80 font-medium">
+                Notre équipe technique est prête à répondre à toutes vos questions concernant nos machines et solutions d'emballage.
+              </p>
             </div>
           </div>
 

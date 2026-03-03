@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import Logo from "./Logo";
 import { Link, useLocation } from "react-router-dom";
@@ -10,10 +10,18 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Accueil", href: "/" },
-    { name: "Ensacheuse", href: "/#ensacheuse" },
-    { name: "Remplisseuse", href: "/#remplisseuse" },
-    { name: "Accessoire", href: "/#accessoire" },
-    { name: "Contact", href: "/#contact" },
+    { 
+      name: "Nos Produits", 
+      href: "/#applications",
+      subItems: [
+        { name: "Ensacheuse à vis", href: "/#applications" },
+        { name: "Ensacheuse à balance", href: "/#applications" },
+        { name: "Ensacheuse à tasse", href: "/#applications" },
+        { name: "Convoyeur", href: "/#applications" },
+      ]
+    },
+    { name: "Accessoires", href: "/#accessoire" },
+    { name: "À Propos", href: "/#about" },
   ];
 
   // Handle hash scroll after navigation
@@ -40,15 +48,39 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={`text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
-                  location.pathname === link.href || (link.href === "/blog" && location.pathname.startsWith("/blog")) ? "text-brand-red" : ""
-                }`}
-              >
-                {link.name}
-              </Link>
+              <div key={link.name} className="relative group">
+                {link.subItems ? (
+                  <>
+                    <button
+                      className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
+                        location.pathname === link.href ? "text-brand-red" : ""
+                      }`}
+                    >
+                      {link.name} <ChevronDown size={14} className="group-hover:rotate-180 transition-transform" />
+                    </button>
+                    <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0 border border-black/5">
+                      {link.subItems.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          to={sub.href}
+                          className="block px-6 py-2 text-sm font-medium hover:bg-brand-red/5 hover:text-brand-red transition-colors"
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    to={link.href}
+                    className={`text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
+                      location.pathname === link.href || (link.href === "/blog" && location.pathname.startsWith("/blog")) ? "text-brand-red" : ""
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                )}
+              </div>
             ))}
             <Link
               to="/#contact"
@@ -80,14 +112,35 @@ export default function Navbar() {
           className="md:hidden bg-white border-b border-black/5 px-4 py-6 space-y-4"
         >
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block text-lg font-bold uppercase tracking-wide hover:text-brand-red"
-            >
-              {link.name}
-            </Link>
+            <div key={link.name} className="space-y-2">
+              {link.subItems ? (
+                <>
+                  <div className="text-lg font-bold uppercase tracking-wide text-brand-black">
+                    {link.name}
+                  </div>
+                  <div className="pl-4 space-y-2">
+                    {link.subItems.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        to={sub.href}
+                        onClick={() => setIsOpen(false)}
+                        className="block text-base font-medium text-black/60 hover:text-brand-red"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <Link
+                  to={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block text-lg font-bold uppercase tracking-wide hover:text-brand-red"
+                >
+                  {link.name}
+                </Link>
+              )}
+            </div>
           ))}
           <Link
             to="/#contact"

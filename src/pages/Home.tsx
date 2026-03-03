@@ -1,11 +1,8 @@
 import Hero from "../components/Hero";
 import About from "../components/About";
-import Features from "../components/Features";
 import Applications from "../components/Applications";
 import Process from "../components/Process";
-import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
-import Blog from "../components/Blog";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 
@@ -13,41 +10,89 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>ORA PACK | N°1 du Packaging au Maroc - Ensacheuses Verticales</title>
-        <meta name="description" content="ORA PACK est le leader marocain de la fabrication de machines d'emballage automatiques. Spécialiste des ensacheuses verticales, peseuses et lignes de conditionnement à Casablanca." />
-        <meta name="keywords" content="packaging maroc, emballage maroc, ensacheuse verticale, machine emballage casablanca, ORA PACK, conditionnement automatique" />
+        <title>ORA PACK | N°1 du Packaging au Maroc - Ensacheuses Verticales & Automatiques</title>
+        <meta name="description" content="ORA PACK est le leader marocain de la fabrication de machines d'emballage automatiques. Spécialiste des ensacheuses verticales, peseuses et lignes de conditionnement à Casablanca. Qualité certifiée et SAV réactif." />
+        <meta name="keywords" content="packaging maroc, emballage maroc, ensacheuse verticale, machine emballage casablanca, ORA PACK, conditionnement automatique, ensacheuse à vis, ensacheuse à balance, convoyeur industriel maroc" />
         <link rel="canonical" href="https://orapack.ma/" />
         <meta property="og:title" content="ORA PACK | Solutions d'Emballage Automatiques au Maroc" />
-        <meta property="og:description" content="Découvrez nos solutions de packaging innovantes fabriquées au Maroc. Performance et précision pour votre production." />
-        <meta property="og:image" content="https://i.postimg.cc/YCvpTj2S/1.webp" />
+        <meta property="og:description" content="Découvrez nos solutions de packaging innovantes fabriquées au Maroc. Performance, précision et fiabilité pour votre ligne de production." />
+        <meta property="og:image" content="https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg" />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://orapack.ma/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ORA PACK | Leader de l'Emballage au Maroc" />
+        <meta name="twitter:description" content="Fabricant de machines d'emballage de haute précision à Casablanca." />
+        <meta name="twitter:image" content="https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Structured Data for Local Business */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "ORA PACK",
+            "image": "https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg",
+            "@id": "https://orapack.ma",
+            "url": "https://orapack.ma",
+            "telephone": "+212661876491",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Tit Mellil",
+              "addressLocality": "Casablanca",
+              "addressCountry": "MA"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 33.5583,
+              "longitude": -7.4833
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "08:00",
+              "closes": "18:00"
+            }
+          })}
+        </script>
       </Helmet>
       <Hero />
       
+      <About />
+      
+      <Applications />
+      
+      <Process />
+
       {/* Trusted By Section (Enhanced) */}
       <section className="py-12 bg-white border-y border-black/5 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col items-center mb-8">
+          <div className="flex flex-col items-center mb-6">
             <motion.div 
               initial={{ width: 0 }}
-              whileInView={{ width: "80px" }}
+              whileInView={{ width: "60px" }}
               viewport={{ once: true }}
-              className="h-1 bg-brand-red mb-6"
+              className="h-1 bg-brand-red mb-4"
             />
-            <h2 className="text-center text-2xl md:text-3xl font-black text-brand-black uppercase tracking-tighter">
+            <h2 className="text-center text-xl md:text-2xl font-black text-brand-black uppercase tracking-tighter">
               NOS PARTENAIRES <span className="text-brand-red">STRATÉGIQUES</span>
             </h2>
-            <p className="text-[10px] font-bold text-black/40 uppercase tracking-[0.4em] mt-2">Ils nous font confiance</p>
           </div>
-          <div className="relative overflow-hidden py-8 bg-brand-black/[0.02] rounded-[4rem]">
+          <div className="relative overflow-hidden py-4 bg-brand-black/[0.01] rounded-[2rem]">
             {/* Side Fades */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
             
             <motion.div 
               animate={{ x: ["0%", "-33.333%"] }}
               transition={{ 
-                duration: 20, 
+                duration: 25, 
                 repeat: Infinity, 
                 ease: "linear" 
               }}
@@ -65,13 +110,13 @@ export default function Home() {
                   ].map((url, i) => (
                     <motion.div 
                       key={`${groupIndex}-${i}`} 
-                      whileHover={{ scale: 1.05, y: -12 }}
-                      className="w-[32rem] h-80 flex items-center justify-center transition-all flex-shrink-0 bg-white rounded-[3rem] shadow-xl shadow-black/[0.03] border border-black/[0.06] mx-8 p-4"
+                      whileHover={{ scale: 1.05, y: -5 }}
+                      className="w-48 h-32 flex items-center justify-center transition-all flex-shrink-0 bg-white rounded-2xl shadow-lg shadow-black/[0.02] border border-black/[0.04] mx-4 p-4"
                     >
                       <img 
                         src={url} 
                         alt="Partenaire" 
-                        className="max-w-full max-h-full object-contain transition-all duration-500"
+                        className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                         referrerPolicy="no-referrer"
                       />
                     </motion.div>
@@ -82,45 +127,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <About />
-      <Features />
-      <Applications />
-      
-      {/* Video Demonstration Section */}
-      <section className="py-24 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center mb-16">
-            <h2 className="text-center text-3xl md:text-4xl font-black text-brand-black uppercase tracking-tighter mb-4">
-              DÉMONSTRATION <span className="text-brand-red">VIDÉO</span>
-            </h2>
-            <div className="h-1.5 w-24 bg-brand-red rounded-full" />
-            <p className="text-black/50 mt-6 max-w-2xl text-center text-lg">
-              Découvrez nos machines en action et constatez la précision et la rapidité de nos solutions d'emballage.
-            </p>
-          </div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative aspect-video w-full max-w-5xl mx-auto rounded-[3rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.1)] border-8 border-white group"
-          >
-            <iframe 
-              src="https://www.youtube.com/embed/8QMoMaCsxkU" 
-              title="ORA PACK Video Demonstration"
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-            ></iframe>
-          </motion.div>
-        </div>
-      </section>
-
-      <Process />
-      <Achievements />
-      
-      <Blog limit={3} />
 
       {/* CTA Section (Enhanced) */}
       <section className="py-32 bg-brand-red relative overflow-hidden">

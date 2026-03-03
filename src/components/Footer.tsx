@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Instagram, ArrowUp, MapPin, Phone, Clock } from "lucide-react";
+import { Facebook, Linkedin, Instagram, ArrowUp, MapPin, Phone, Clock, Mail } from "lucide-react";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 
@@ -33,10 +33,10 @@ export default function Footer() {
             <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Navigation</h4>
             <ul className="space-y-4 text-white/40">
               <li><Link to="/" className="hover:text-brand-red transition-colors">Accueil</Link></li>
-              <li><Link to="/#ensacheuse" className="hover:text-brand-red transition-colors">Ensacheuse</Link></li>
-              <li><Link to="/#remplisseuse" className="hover:text-brand-red transition-colors">Remplisseuse</Link></li>
-              <li><Link to="/#accessoire" className="hover:text-brand-red transition-colors">Accessoire</Link></li>
-              <li><Link to="/#contact" className="hover:text-brand-red transition-colors">Contact</Link></li>
+              <li><Link to="/#applications" className="hover:text-brand-red transition-colors">Nos Produits</Link></li>
+              <li><Link to="/#accessoire" className="hover:text-brand-red transition-colors">Accessoires</Link></li>
+              <li><Link to="/#about" className="hover:text-brand-red transition-colors">À Propos</Link></li>
+              <li><Link to="/blog" className="hover:text-brand-red transition-colors">Blog</Link></li>
             </ul>
           </div>
 
@@ -53,9 +53,9 @@ export default function Footer() {
           <div>
             <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Contact</h4>
             <ul className="space-y-4 text-white/40 text-sm">
-              <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-brand-red shrink-0" />
-                <span>Tit Mellil, Casablanca, Maroc</span>
+              <li className="flex items-center gap-3">
+                <Mail size={16} className="text-brand-red shrink-0" />
+                <a href="mailto:orapack.sarl@gmail.com" className="hover:text-brand-red transition-colors">orapack.sarl@gmail.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <svg className="w-4 h-4 text-brand-red shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -63,9 +63,9 @@ export default function Footer() {
                 </svg>
                 <a href="https://wa.me/212661876491" target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors">+212 661-876491</a>
               </li>
-              <li className="flex items-center gap-3">
-                <Clock size={16} className="text-brand-red shrink-0" />
-                <span>Lun - Sam : 8h - 18h</span>
+              <li className="flex items-start gap-3">
+                <MapPin size={16} className="text-brand-red shrink-0" />
+                <span>Casablanca, Maroc</span>
               </li>
             </ul>
           </div>

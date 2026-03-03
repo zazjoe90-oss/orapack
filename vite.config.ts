@@ -16,6 +16,9 @@ export default defineConfig(({mode}) => {
         'fetch-blob': path.resolve(__dirname, 'src/fetch-mock.ts'),
         'cross-fetch': path.resolve(__dirname, 'src/fetch-mock.ts'),
         'isomorphic-fetch': path.resolve(__dirname, 'src/fetch-mock.ts'),
+        'whatwg-fetch': path.resolve(__dirname, 'src/fetch-mock.ts'),
+        'unfetch': path.resolve(__dirname, 'src/fetch-mock.ts'),
+        'isomorphic-form-data': path.resolve(__dirname, 'src/fetch-mock.ts'),
       },
     },
     server: {

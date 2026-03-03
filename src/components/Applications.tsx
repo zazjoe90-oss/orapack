@@ -22,9 +22,9 @@ const applications = [
   },
   {
     title: "Snacks & Confiserie",
-    description: "Chips, bonbons, fruits secs, biscuits et produits de grignotage.",
+    description: "Chips, bonbons, biscuits, chocolats et produits de grignotage.",
     icon: Utensils,
-    image: "https://images.unsplash.com/photo-1599490659213-e2b9527bb087?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Produits Surgelés",
@@ -33,10 +33,10 @@ const applications = [
     image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Quincaillerie & Divers",
-    description: "Vis, pièces en plastique, petits composants et articles non alimentaires.",
-    icon: Zap,
-    image: "https://images.unsplash.com/photo-1530124560676-44bc91422698?auto=format&fit=crop&q=80&w=800",
+    title: "Fruits secs",
+    description: "Amandes, noix, dattes, abricots secs et mélanges de fruits séchés.",
+    icon: ShoppingBag,
+    image: "https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?auto=format&fit=crop&q=80&w=800",
   },
 ];
 
@@ -81,6 +81,7 @@ export default function Applications() {
                 <img 
                   src={app.image} 
                   alt={app.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40 group-hover:opacity-60"
                   referrerPolicy="no-referrer"
                 />

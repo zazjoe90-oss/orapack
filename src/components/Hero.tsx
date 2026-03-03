@@ -3,9 +3,10 @@ import { ArrowRight, Play, ChevronRight, Sparkles, X } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 
 const heroImages = [
-  "https://i.postimg.cc/YCvpTj2S/1.webp",
-  "https://i.postimg.cc/sgbVzy1r/2.webp",
-  "https://i.postimg.cc/JzS18mt8/3.webp"
+  "https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg",
+  "https://i.postimg.cc/fDRGZFcz/enchaseuse.jpg",
+  "https://i.postimg.cc/bYNByD2R/convoyeur.jpg",
+  "https://i.postimg.cc/kqg09ZQG/convayeur.jpg"
 ];
 
 function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -106,21 +107,7 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="flex flex-wrap gap-5"
             >
-              <motion.a 
-                href="#solutions"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-brand-red text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 shadow-2xl shadow-brand-red/20 group"
-              >
-                Explorer nos Machines <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-              </motion.a>
-              <motion.button 
-                onClick={() => setIsVideoOpen(true)}
-                whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
-                className="border border-white/20 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest flex items-center gap-3 backdrop-blur-sm"
-              >
-                <Play size={20} className="fill-brand-red text-brand-red" /> Voir en Action
-              </motion.button>
+              {/* Buttons removed as requested */}
             </motion.div>
 
             <div className="mt-16 grid grid-cols-3 gap-10 border-t border-white/10 pt-10">
@@ -151,24 +138,7 @@ export default function Hero() {
             className="relative z-10"
           >
             <div className="relative group">
-              {/* Floating Badge */}
-              <motion.div 
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-6 -left-6 z-30 bg-white p-4 rounded-2xl shadow-2xl border border-black/5 hidden md:block"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center">
-                    <ChevronRight className="text-brand-red" />
-                  </div>
-                  <div>
-                    <div className="text-[10px] font-bold text-black/40 uppercase tracking-widest">Technologie</div>
-                    <div className="text-sm font-black text-brand-black uppercase">Précision Max</div>
-                  </div>
-                </div>
-              </motion.div>
-
-              <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_100px_rgba(227,30,36,0.15)] bg-brand-black aspect-[4/5]">
+              <div className="relative rounded-[2rem] overflow-hidden border border-transparent shadow-[0_0_100px_rgba(227,30,36,0.15)] bg-brand-black aspect-[4/5]">
                 <AnimatePresence mode="wait">
                   <motion.img 
                     key={currentImage}
@@ -178,28 +148,12 @@ export default function Hero() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 1 }}
                     alt="Ensacheuse Verticale Orapack" 
-                    className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                    className="absolute inset-0 w-full h-full object-cover transition-all duration-1000"
                     referrerPolicy="no-referrer"
                   />
                 </AnimatePresence>
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>
-                
-                <div className="absolute bottom-8 left-8 right-8 p-8 glass-card rounded-3xl border-white/10">
-                  <div className="flex justify-between items-end">
-                    <div>
-                      <div className="text-brand-red text-xs font-black uppercase tracking-widest mb-2">Série Premium</div>
-                      <h3 className="text-brand-black text-2xl font-black uppercase tracking-tighter">Ensacheuse V-2025</h3>
-                    </div>
-                    <div className="bg-brand-red text-white p-3 rounded-xl">
-                      <ArrowRight size={24} />
-                    </div>
-                  </div>
-                </div>
               </div>
-
-              {/* Decorative rings */}
-              <div className="absolute -inset-4 border border-white/5 rounded-[2.5rem] -z-10 animate-pulse"></div>
-              <div className="absolute -inset-8 border border-white/5 rounded-[3rem] -z-20"></div>
             </div>
           </motion.div>
         </div>

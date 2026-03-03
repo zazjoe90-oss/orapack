@@ -58,10 +58,10 @@ export default function About() {
               className="space-y-4"
             >
               <img 
-                src="https://i.postimg.cc/YCvpTj2S/1.webp" 
+                src="https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg" 
                 alt="Usine ORA PACK - Vue 1" 
                 loading="lazy"
-                className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-[4/5] object-cover shadow-2xl"
+                className="rounded-2xl hover:scale-[1.02] transition-all duration-500 w-full aspect-[4/5] object-cover shadow-2xl"
                 referrerPolicy="no-referrer"
               />
               <div className="bg-brand-red p-6 rounded-2xl">
@@ -69,10 +69,10 @@ export default function About() {
                 <div className="text-xs uppercase tracking-widest opacity-80">Délais Respectés</div>
               </div>
               <img 
-                src="https://i.postimg.cc/JzS18mt8/3.webp" 
+                src="https://i.postimg.cc/fDRGZFcz/enchaseuse.jpg" 
                 alt="Usine ORA PACK - Vue 3" 
                 loading="lazy"
-                className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-square object-cover shadow-2xl"
+                className="rounded-2xl hover:scale-[1.02] transition-all duration-500 w-full aspect-square object-cover shadow-2xl"
                 referrerPolicy="no-referrer"
               />
             </motion.div>
@@ -87,10 +87,10 @@ export default function About() {
                 <div className="text-xs uppercase tracking-widest opacity-80">Fiabilité Partenaire</div>
               </div>
               <img 
-                src="https://i.postimg.cc/sgbVzy1r/2.webp" 
+                src="https://i.postimg.cc/bYNByD2R/convoyeur.jpg" 
                 alt="Usine ORA PACK - Vue 2" 
                 loading="lazy"
-                className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-[4/6] object-cover shadow-2xl"
+                className="rounded-2xl hover:scale-[1.02] transition-all duration-500 w-full aspect-[4/6] object-cover shadow-2xl"
                 referrerPolicy="no-referrer"
               />
             </motion.div>
