@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orapack.ma/sitemap.xml
