@@ -139,17 +139,18 @@ export default function Hero() {
           >
             <div className="relative group">
               <div className="relative rounded-[2rem] overflow-hidden border border-transparent shadow-[0_0_100px_rgba(227,30,36,0.15)] bg-brand-black aspect-[4/5]">
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" initial={false}>
                   <motion.img 
                     key={currentImage}
                     src={heroImages[currentImage]} 
-                    initial={{ opacity: 0, scale: 1.1 }}
+                    initial={currentImage === 0 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.8 }}
                     alt="Ensacheuse Verticale Orapack" 
-                    className="absolute inset-0 w-full h-full object-cover transition-all duration-1000"
+                    className="absolute inset-0 w-full h-full object-cover"
                     referrerPolicy="no-referrer"
+                    {...(currentImage === 0 ? { fetchPriority: "high", decoding: "sync" } : { decoding: "async" })}
                   />
                 </AnimatePresence>
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>

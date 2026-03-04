@@ -14,6 +14,19 @@ export default function Home() {
         <meta name="description" content="ORA PACK est le leader marocain de la fabrication de machines d'emballage automatiques. Spécialiste des ensacheuses verticales, peseuses et lignes de conditionnement à Casablanca. Qualité certifiée et SAV réactif." />
         <meta name="keywords" content="packaging maroc, emballage maroc, ensacheuse verticale, machine emballage casablanca, ORA PACK, conditionnement automatique, ensacheuse à vis, ensacheuse à balance, convoyeur industriel maroc" />
         <link rel="canonical" href="https://orapack.ma/" />
+        
+        {/* LCP Optimization: Preload Hero Image */}
+        <link 
+          rel="preload" 
+          as="image" 
+          href="https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg" 
+          fetchpriority="high" 
+        />
+        
+        {/* Preload Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
         <meta property="og:title" content="ORA PACK | Solutions d'Emballage Automatiques au Maroc" />
         <meta property="og:description" content="Découvrez nos solutions de packaging innovantes fabriquées au Maroc. Performance, précision et fiabilité pour votre ligne de production." />
         <meta property="og:image" content="https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg" />
