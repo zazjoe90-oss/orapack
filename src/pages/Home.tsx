@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Products from "../components/Products";
 import Applications from "../components/Applications";
 import Process from "../components/Process";
 import Contact from "../components/Contact";
@@ -78,6 +79,8 @@ export default function Home() {
       <Hero />
       
       <About />
+      
+      <Products />
       
       <Applications />
       

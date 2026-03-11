@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import Logo from "./Logo";
@@ -12,15 +12,15 @@ export default function Navbar() {
     { name: "Accueil", href: "/" },
     { 
       name: "Nos Produits", 
-      href: "/#applications",
+      href: "/produits",
       subItems: [
-        { name: "Ensacheuse à vis", href: "/#applications" },
-        { name: "Ensacheuse à balance", href: "/#applications" },
-        { name: "Ensacheuse à tasse", href: "/#applications" },
-        { name: "Convoyeur", href: "/#applications" },
+        { name: "Ensacheuse Verticale à vis", href: "/produit/ensacheuse-verticale-a-vis" },
+        { name: "Ensacheuse a tasse", href: "/produit/ensacheuse-a-tasse" },
+        { name: "Ensacheuse a balance", href: "/produit/ensacheuse-a-balance" },
+        { name: "Convoyeur", href: "/produit/convoyeur" },
       ]
     },
-    { name: "Accessoires", href: "/#accessoire" },
+    { name: "Accessoires", href: "/accessoires" },
     { name: "À Propos", href: "/#about" },
   ];
 
@@ -51,13 +51,14 @@ export default function Navbar() {
               <div key={link.name} className="relative group">
                 {link.subItems ? (
                   <>
-                    <button
+                    <Link
+                      to={link.href}
                       className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
                         location.pathname === link.href ? "text-brand-red" : ""
                       }`}
                     >
                       {link.name} <ChevronDown size={14} className="group-hover:rotate-180 transition-transform" />
-                    </button>
+                    </Link>
                     <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0 border border-black/5">
                       {link.subItems.map((sub) => (
                         <Link
@@ -74,7 +75,7 @@ export default function Navbar() {
                   <Link
                     to={link.href}
                     className={`text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
-                      location.pathname === link.href || (link.href === "/blog" && location.pathname.startsWith("/blog")) ? "text-brand-red" : ""
+                      location.pathname === link.href || (link.href === "/accessoires" && location.pathname.startsWith("/accessoires")) ? "text-brand-red" : ""
                     }`}
                   >
                     {link.name}
@@ -105,52 +106,81 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Nav */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white border-b border-black/5 px-4 py-6 space-y-4"
-        >
-          {navLinks.map((link) => (
-            <div key={link.name} className="space-y-2">
-              {link.subItems ? (
-                <>
-                  <div className="text-lg font-bold uppercase tracking-wide text-brand-black">
-                    {link.name}
-                  </div>
-                  <div className="pl-4 space-y-2">
-                    {link.subItems.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        to={sub.href}
-                        onClick={() => setIsOpen(false)}
-                        className="block text-base font-medium text-black/60 hover:text-brand-red"
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                </>
-              ) : (
-                <Link
-                  to={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-lg font-bold uppercase tracking-wide hover:text-brand-red"
-                >
-                  {link.name}
-                </Link>
-              )}
-            </div>
-          ))}
-          <Link
-            to="/#contact"
-            onClick={() => setIsOpen(false)}
-            className="block bg-brand-red text-white text-center px-6 py-3 rounded-xl font-bold uppercase tracking-widest"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-50 md:hidden bg-white flex flex-col"
           >
-            Devis Gratuit
-          </Link>
-        </motion.div>
-      )}
+            <div className="flex justify-between items-center h-20 px-4 border-b border-black/5">
+              <Logo />
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 text-brand-black"
+              >
+                <X size={28} />
+              </button>
+            </div>
+            
+            <div className="flex-grow overflow-y-auto px-6 py-10 space-y-8">
+              {navLinks.map((link, index) => (
+                <motion.div 
+                  key={link.name}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="space-y-4"
+                >
+                  {link.subItems ? (
+                    <>
+                      <Link
+                        to={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className="text-2xl font-black uppercase tracking-tighter text-brand-black hover:text-brand-red transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                      <div className="pl-4 space-y-4 border-l-2 border-brand-red/20">
+                        {link.subItems.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            to={sub.href}
+                            onClick={() => setIsOpen(false)}
+                            className="block text-lg font-medium text-black/60 hover:text-brand-red transition-colors"
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-3xl font-black uppercase tracking-tighter hover:text-brand-red transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="p-6 border-t border-black/5">
+              <Link
+                to="/#contact"
+                onClick={() => setIsOpen(false)}
+                className="block bg-brand-red text-white text-center px-6 py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl shadow-brand-red/20"
+              >
+                Devis Gratuit
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

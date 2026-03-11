@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform, AnimatePresence, useInView } from "motion/react";
 import { ArrowRight, Play, ChevronRight, Sparkles, X } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const heroImages = [
   "https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg",
@@ -81,7 +82,7 @@ export default function Hero() {
               <span className="text-brand-red">N°1 AU MAROC</span> — SOLUTIONS D'EMBALLAGE
             </motion.div>
             
-            <h1 className="text-6xl md:text-7xl lg:text-8xl text-white mb-8 leading-[0.85] font-black tracking-tighter">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-8 leading-[0.9] font-black tracking-tighter">
               L'AVENIR DU <br />
               <span className="text-brand-red relative inline-block">
                 PACKAGING
@@ -96,7 +97,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xl text-white/50 mb-12 max-w-xl font-light leading-relaxed"
+              className="text-lg sm:text-xl text-white/50 mb-12 max-w-xl font-light leading-relaxed"
             >
               Propulsez votre production avec nos <span className="text-white font-medium">Ensacheuses Verticales</span> de nouvelle génération. Performance marocaine, standards internationaux.
             </motion.p>
@@ -107,10 +108,24 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="flex flex-wrap gap-5"
             >
-              {/* Buttons removed as requested */}
+              <Link 
+                to="/#contact"
+                className="bg-brand-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-brand-red transition-all shadow-2xl shadow-brand-red/20 flex items-center gap-3 group"
+              >
+                Demander un Devis <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+              </Link>
+              <button 
+                onClick={() => setIsVideoOpen(true)}
+                className="bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-full font-black uppercase tracking-widest transition-all border border-white/10 flex items-center gap-3 backdrop-blur-sm"
+              >
+                <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+                  <Play size={14} fill="white" />
+                </div>
+                Voir la Vidéo
+              </button>
             </motion.div>
 
-            <div className="mt-16 grid grid-cols-3 gap-10 border-t border-white/10 pt-10">
+            <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 border-t border-white/10 pt-10">
               {[
                 { label: "Machines", val: 500, suffix: "+" },
                 { label: "Clients", val: 120, suffix: "+" },
