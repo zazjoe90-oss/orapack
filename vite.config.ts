@@ -10,15 +10,6 @@ export default defineConfig(({mode}) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
-        'node-fetch': path.resolve(__dirname, 'src/fetch-mock.ts'),
-        'formdata-polyfill': path.resolve(__dirname, 'src/fetch-mock.ts'),
-        'formdata-polyfill/esm.min.js': path.resolve(__dirname, 'src/fetch-mock.ts'),
-        'fetch-blob': path.resolve(__dirname, 'src/fetch-mock.ts'),
-        'cross-fetch': path.resolve(__dirname, 'src/fetch-mock.ts'),
-        'isomorphic-fetch': path.resolve(__dirname, 'src/fetch-mock.ts'),
-        'whatwg-fetch': path.resolve(__dirname, 'src/fetch-mock.ts'),
-        'unfetch': path.resolve(__dirname, 'src/fetch-mock.ts'),
-        'isomorphic-form-data': path.resolve(__dirname, 'src/fetch-mock.ts'),
       },
     },
     server: {
