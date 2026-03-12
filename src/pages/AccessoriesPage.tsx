@@ -16,7 +16,7 @@ const accessories = [
     id: 2,
     name: "Conformateur sur mesure",
     description: "Conformateurs en acier inoxydable fabriqués selon vos spécifications exactes pour tout type de film et de format de sachet.",
-    image: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800",
+    image: "https://i.postimg.cc/kJyHPFDy/Whats-App-Image-2026-03-01-at-12-44-42.jpg",
     icon: <Wrench className="w-6 h-6" />,
     features: ["Inox 316L", "Finition miroir", "Anti-adhérent"]
   },
@@ -24,7 +24,7 @@ const accessories = [
     id: 3,
     name: "Panneau de commande intelligent multifonction",
     description: "Système de contrôle intelligent par micro-ordinateur pour machines d'emballage. Permet un réglage précis du poids, le comptage automatique des sacs et la gestion de la vitesse de production.",
-    image: "https://images.unsplash.com/photo-1581092162384-8987c1794ed9?auto=format&fit=crop&q=80&w=800",
+    image: "https://i.postimg.cc/gckTzX6V/Whats-App-Image-2026-03-01-at-13-02-29.jpg",
     icon: <Cpu className="w-6 h-6" />,
     features: ["Réglage du poids (g)", "Calcul automatique des paquets", "Vitesse réglable (3 niveaux)"]
   }

@@ -14,9 +14,9 @@ export default function Navbar() {
       name: "Nos Produits", 
       href: "/produits",
       subItems: [
-        { name: "Ensacheuse Verticale à vis", href: "/produit/ensacheuse-verticale-a-vis" },
+        { name: "Ensacheuse à vis", href: "/produit/ensacheuse-verticale-a-vis" },
         { name: "Ensacheuse a tasse", href: "/produit/ensacheuse-a-tasse" },
-        { name: "Ensacheuse a balance", href: "/produit/ensacheuse-a-balance" },
+        { name: "Ensacheuse pondérale", href: "/produit/ensacheuse-a-balance" },
         { name: "Convoyeur", href: "/produit/convoyeur" },
       ]
     },

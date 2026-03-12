@@ -13,7 +13,7 @@ export default function Home() {
       <Helmet>
         <title>ORA PACK | N°1 du Packaging au Maroc - Ensacheuses Verticales & Automatiques</title>
         <meta name="description" content="ORA PACK est le leader marocain de la fabrication de machines d'emballage automatiques. Spécialiste des ensacheuses verticales, peseuses et lignes de conditionnement à Casablanca. Qualité certifiée et SAV réactif." />
-        <meta name="keywords" content="packaging maroc, emballage maroc, ensacheuse verticale, machine emballage casablanca, ORA PACK, conditionnement automatique, ensacheuse à vis, ensacheuse à balance, convoyeur industriel maroc" />
+        <meta name="keywords" content="packaging maroc, emballage maroc, ensacheuse verticale, machine emballage casablanca, ORA PACK, conditionnement automatique, ensacheuse à vis, ensacheuse pondérale, convoyeur industriel maroc" />
         <link rel="canonical" href="https://orapack.ma/" />
         
         {/* LCP Optimization: Preload Hero Image */}
