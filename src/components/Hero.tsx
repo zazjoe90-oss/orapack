@@ -4,8 +4,9 @@ import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const heroImages = [
-  "https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg",
+  "https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg",
   "https://i.postimg.cc/fDRGZFcz/enchaseuse.jpg",
+  "https://i.postimg.cc/xnX4xZks/Whats-App-Image-2026-03-12-at-21-11-12.jpg",
   "https://i.postimg.cc/bYNByD2R/convoyeur.jpg",
   "https://i.postimg.cc/kqg09ZQG/convayeur.jpg"
 ];

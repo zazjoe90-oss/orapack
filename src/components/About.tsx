@@ -58,7 +58,7 @@ export default function About() {
               className="space-y-4"
             >
               <img 
-                src="https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg" 
+                src="https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg" 
                 alt="Usine ORA PACK - Vue 1" 
                 loading="lazy"
                 className="rounded-2xl hover:scale-[1.02] transition-all duration-500 w-full aspect-[4/5] object-cover shadow-2xl"
@@ -87,7 +87,7 @@ export default function About() {
                 <div className="text-xs uppercase tracking-widest opacity-80">Fiabilité Partenaire</div>
               </div>
               <img 
-                src="https://i.postimg.cc/bYNByD2R/convoyeur.jpg" 
+                src="https://i.postimg.cc/xnX4xZks/Whats-App-Image-2026-03-12-at-21-11-12.jpg" 
                 alt="Usine ORA PACK - Vue 2" 
                 loading="lazy"
                 className="rounded-2xl hover:scale-[1.02] transition-all duration-500 w-full aspect-[4/6] object-cover shadow-2xl"

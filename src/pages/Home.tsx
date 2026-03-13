@@ -6,8 +6,11 @@ import Process from "../components/Process";
 import Contact from "../components/Contact";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 
 export default function Home() {
+  const [isPartnersHovered, setIsPartnersHovered] = useState(false);
+
   return (
     <>
       <Helmet>
@@ -20,7 +23,7 @@ export default function Home() {
         <link 
           rel="preload" 
           as="image" 
-          href="https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg" 
+          href="https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg" 
           fetchpriority="high" 
         />
         
@@ -30,13 +33,13 @@ export default function Home() {
         
         <meta property="og:title" content="ORA PACK | Solutions d'Emballage Automatiques au Maroc" />
         <meta property="og:description" content="Découvrez nos solutions de packaging innovantes fabriquées au Maroc. Performance, précision et fiabilité pour votre ligne de production." />
-        <meta property="og:image" content="https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg" />
+        <meta property="og:image" content="https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://orapack.ma/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ORA PACK | Leader de l'Emballage au Maroc" />
         <meta name="twitter:description" content="Fabricant de machines d'emballage de haute précision à Casablanca." />
-        <meta name="twitter:image" content="https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg" />
+        <meta name="twitter:image" content="https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg" />
         <meta name="robots" content="index, follow" />
         
         {/* Structured Data for Local Business */}
@@ -45,7 +48,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "ORA PACK",
-            "image": "https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg",
+            "image": "https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg",
             "@id": "https://orapack.ma",
             "url": "https://orapack.ma",
             "telephone": "+212661876491",
@@ -87,7 +90,11 @@ export default function Home() {
       <Process />
 
       {/* Trusted By Section (Enhanced) */}
-      <section className="py-12 bg-white border-y border-black/5 overflow-hidden">
+      <section 
+        className="py-12 bg-white border-y border-black/5 overflow-hidden"
+        onMouseEnter={() => setIsPartnersHovered(true)}
+        onMouseLeave={() => setIsPartnersHovered(false)}
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col items-center mb-6">
             <motion.div 
@@ -108,7 +115,7 @@ export default function Home() {
             <motion.div 
               animate={{ x: ["0%", "-33.333%"] }}
               transition={{ 
-                duration: 25, 
+                duration: isPartnersHovered ? 10 : 25, 
                 repeat: Infinity, 
                 ease: "linear" 
               }}

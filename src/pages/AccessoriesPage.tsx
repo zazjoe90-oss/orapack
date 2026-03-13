@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Settings, Wrench, Cpu } from "lucide-react";
+import { ArrowUpRight, Settings, Wrench, Cpu, Truck } from "lucide-react";
 
 const accessories = [
   {
@@ -27,6 +27,14 @@ const accessories = [
     image: "https://i.postimg.cc/gckTzX6V/Whats-App-Image-2026-03-01-at-13-02-29.jpg",
     icon: <Cpu className="w-6 h-6" />,
     features: ["Réglage du poids (g)", "Calcul automatique des paquets", "Vitesse réglable (3 niveaux)"]
+  },
+  {
+    id: 4,
+    name: "Convoyeur",
+    description: "Systèmes de transport robustes et modulables pour optimiser votre ligne de production. Structure en Inox 304 et vitesse réglable.",
+    image: "https://i.postimg.cc/kqg09ZQG/convayeur.jpg",
+    icon: <Truck className="w-6 h-6" />,
+    features: ["Structure Inox 304", "Vitesse réglable", "Hauteur ajustable"]
   }
 ];
 

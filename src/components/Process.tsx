@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Search, Settings, Cpu, Truck, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -32,6 +32,18 @@ const steps = [
 export default function Process() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const timer = setInterval(() => {
+      setDirection(1);
+      setCurrentIndex((prev) => (prev + 1) % steps.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [isAutoPlaying, currentIndex]);
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -54,11 +66,13 @@ export default function Process() {
   };
 
   const nextStep = () => {
+    setIsAutoPlaying(false);
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % steps.length);
   };
 
   const prevStep = () => {
+    setIsAutoPlaying(false);
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + steps.length) % steps.length);
   };
@@ -66,7 +80,11 @@ export default function Process() {
   const step = steps[currentIndex];
 
   return (
-    <section className="py-24 bg-brand-black text-white relative overflow-hidden">
+    <section 
+      className="py-24 bg-brand-black text-white relative overflow-hidden"
+      onMouseEnter={() => setIsAutoPlaying(false)}
+      onMouseLeave={() => setIsAutoPlaying(true)}
+    >
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-red/20 rounded-full blur-[120px]" />

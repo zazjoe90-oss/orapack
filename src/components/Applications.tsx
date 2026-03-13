@@ -27,16 +27,10 @@ const applications = [
     image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Produits Surgelés",
-    description: "Légumes surgelés, fruits de mer, viandes et produits à basse température.",
-    icon: Box,
-    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&q=80&w=800",
-  },
-  {
     title: "Fruits secs",
     description: "Amandes, noix, dattes, abricots secs et mélanges de fruits séchés.",
     icon: ShoppingBag,
-    image: "https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?auto=format&fit=crop&q=80&w=800",
+    image: "https://i.postimg.cc/V1GhFwNj/Whats-App-Image-2026-03-12-at-20-06-48.jpg",
   },
 ];
 

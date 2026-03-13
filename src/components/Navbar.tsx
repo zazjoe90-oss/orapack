@@ -17,7 +17,7 @@ export default function Navbar() {
         { name: "Ensacheuse à vis", href: "/produit/ensacheuse-verticale-a-vis" },
         { name: "Ensacheuse a tasse", href: "/produit/ensacheuse-a-tasse" },
         { name: "Ensacheuse pondérale", href: "/produit/ensacheuse-a-balance" },
-        { name: "Convoyeur", href: "/produit/convoyeur" },
+        { name: "Ensacheuse pondéral semi-automatique", href: "/produit/ensacheuse-ponderal-semi-automatique" },
       ]
     },
     { name: "Accessoires", href: "/accessoires" },
