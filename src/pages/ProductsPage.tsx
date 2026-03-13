@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { products } from "../data/products";
-import { ArrowUpRight, Plus } from "lucide-react";
+import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 export default function ProductsPage() {
@@ -48,8 +48,14 @@ export default function ProductsPage() {
                   />
                   <div className="absolute inset-0 bg-brand-black/20 group-hover:bg-transparent transition-colors duration-500" />
                   
-                  <div className="absolute top-8 left-8 px-5 py-2 bg-white/90 backdrop-blur-sm text-brand-black rounded-full text-xs font-black uppercase tracking-widest">
-                    {product.category}
+                  <div className="absolute top-8 left-8 flex flex-col gap-2">
+                    <div className="px-5 py-2 bg-white/90 backdrop-blur-sm text-brand-black rounded-full text-xs font-black uppercase tracking-widest self-start">
+                      {product.category}
+                    </div>
+                    <div className="px-4 py-2 bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 text-brand-black rounded-full text-[10px] font-black uppercase tracking-widest flex items-center gap-2 self-start shadow-xl shadow-amber-500/20 border border-amber-300/50">
+                      <ShieldCheck size={14} />
+                      Garantie 1 an + Maintenance
+                    </div>
                   </div>
                 </div>
 

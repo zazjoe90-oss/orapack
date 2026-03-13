@@ -61,8 +61,14 @@ export default function ProductDetails() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            <div className="inline-block px-4 py-1.5 bg-brand-red/10 text-brand-red rounded-full text-xs font-black uppercase tracking-widest mb-6">
-              {product.category}
+            <div className="flex flex-wrap gap-3 mb-6">
+              <div className="px-4 py-1.5 bg-brand-red/10 text-brand-red rounded-full text-xs font-black uppercase tracking-widest">
+                {product.category}
+              </div>
+              <div className="px-4 py-1.5 bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 text-brand-black rounded-full text-[10px] font-black uppercase tracking-widest flex items-center gap-2 shadow-xl shadow-amber-500/20 border border-amber-300/50">
+                <ShieldCheck size={14} />
+                Garantie 1 an + Maintenance
+              </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6">
               {product.name}

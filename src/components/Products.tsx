@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { products } from "../data/products";
-import { ArrowUpRight, Plus } from "lucide-react";
+import { ArrowUpRight, ShieldCheck } from "lucide-react";
 
 export default function Products() {
   return (
@@ -50,8 +50,14 @@ export default function Products() {
                   <div className="absolute inset-0 bg-brand-black/20 group-hover:bg-transparent transition-colors duration-500" />
                   
                   {/* Category Tag */}
-                  <div className="absolute top-6 left-6 px-4 py-1.5 bg-white/90 backdrop-blur-sm text-brand-black rounded-full text-[10px] font-black uppercase tracking-widest">
-                    {product.category}
+                  <div className="absolute top-6 left-6 flex flex-col gap-2">
+                    <div className="px-4 py-1.5 bg-white/90 backdrop-blur-sm text-brand-black rounded-full text-[10px] font-black uppercase tracking-widest self-start">
+                      {product.category}
+                    </div>
+                    <div className="px-3 py-1.5 bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 text-brand-black rounded-full text-[8px] font-black uppercase tracking-widest flex items-center gap-1.5 self-start shadow-xl shadow-amber-500/10 border border-amber-300/50">
+                      <ShieldCheck size={12} />
+                      Garantie 1 an
+                    </div>
                   </div>
                 </div>
 
@@ -69,18 +75,8 @@ export default function Products() {
                   <div className="flex items-center justify-between mt-auto">
                     <div className="flex items-center gap-2 text-brand-black font-black uppercase tracking-widest text-xs group/btn">
                       En savoir plus 
-                      <span className="w-8 h-8 rounded-full bg-brand-black text-white flex items-center justify-center group-hover/btn:bg-brand-red transition-colors">
-                        <ArrowUpRight size={14} />
-                      </span>
+                      <ArrowUpRight size={18} className="group-hover/btn:text-brand-red transition-colors" />
                     </div>
-                    
-                    <motion.button 
-                      whileHover={{ rotate: 90 }}
-                      onClick={(e) => e.preventDefault()}
-                      className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-black/40 hover:text-brand-red hover:border-brand-red transition-all relative z-20"
-                    >
-                      <Plus size={20} />
-                    </motion.button>
                   </div>
                 </div>
               </Link>

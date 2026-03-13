@@ -23,6 +23,7 @@ export const products: Product[] = [
     longDescription: "L'ensacheuse à vis ORA PACK est la solution idéale pour les produits tels que la farine, le café moulu, les épices et les produits chimiques en poudre. Son système de dosage par vis sans fin garantit une précision exceptionnelle et un environnement de travail sans poussière.",
     image: "https://i.postimg.cc/fDRGZFcz/enchaseuse.jpg",
     features: [
+      "Garantie 1 an avec suivi de maintenance",
       "Utilisation du film à plat PE et PP",
       "Régulation automatique de la température de soudure",
       "Coupe du sachet par couteau à 2 étages",
@@ -51,6 +52,7 @@ export const products: Product[] = [
     longDescription: "L'ensacheuse à tasses volumétriques est conçue pour la rapidité et la simplicité. Elle convient parfaitement aux produits de granulométrie régulière comme le riz, le sel, le sucre ou les petites graines.",
     image: "https://i.postimg.cc/3KF1kr7R/Whats-App-Image-2026-03-01-at-12-27-45.jpg",
     features: [
+      "Garantie 1 an avec suivi de maintenance",
       "Utilisation du film à plat PE et PP",
       "Régulation automatique de la température de soudure",
       "Coupe du sachet par couteau à 2 étages",
@@ -79,6 +81,7 @@ export const products: Product[] = [
     longDescription: "Grâce à son système de balance linéaire ou multi-têtes, cette ensacheuse pondérale traite avec soin les produits délicats ou de formes variées tels que les pâtes, les snacks, les biscuits ou les fruits secs.",
     image: "https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg",
     features: [
+      "Garantie 1 an avec suivi de maintenance",
       "Utilisation du film à plat PE et PP",
       "Régulation automatique de la température de soudure",
       "Coupe du sachet par couteau à 2 étages",
@@ -103,22 +106,23 @@ export const products: Product[] = [
     slug: "ensacheuse-ponderal-semi-automatique",
     name: "Ensacheuse pondéral semi-automatique",
     category: "Ensacheuses",
-    description: "Précision et flexibilité pour vos opérations de conditionnement semi-automatiques.",
-    longDescription: "L'ensacheuse pondérale semi-automatique ORA PACK combine la précision du pesage électronique avec la flexibilité d'une opération manuelle ou semi-assistée. Idéale pour les petites et moyennes productions nécessitant une grande précision de dosage.",
+    description: "Machine de emballage pondéral semi-automatique pour céréales et grains (5 g – 1000 g)",
+    longDescription: "Machine de remplissage pondéral semi-automatique conçue pour l’emballage précis de différents produits alimentaires comme le riz, les lentilles, le sucre, les fruits secs et autres grains. Elle garantit précision, facilité d’utilisation et productivité élevée.",
     image: "https://i.postimg.cc/xnX4xZks/Whats-App-Image-2026-03-12-at-21-11-12.jpg",
     features: [
-      "Système de pesage électronique haute précision",
-      "Interface tactile intuitive",
-      "Structure robuste en acier inoxydable",
-      "Facilité de nettoyage et de maintenance",
-      "Adaptable à divers types de contenants"
+      "Fabrication marocaine",
+      "Garantie 1 an avec suivi de maintenance",
+      "Facile à utiliser, rapide, améliore la productivité",
+      "Précision de pesage haute précision",
+      "Structure métallique résistante"
     ],
     specs: [
-      { label: "Plage de pesage", value: "50g - 5000g" },
-      { label: "Précision", value: "± 0.2% - 1%" },
-      { label: "Vitesse", value: "5 - 15 cycles/min" },
-      { label: "Alimentation", value: "220V 50Hz" },
-      { label: "Matériau", value: "Inox 304" }
+      { label: "Type de machine", value: "Remplisseuse pondérale semi-automatique" },
+      { label: "Plage de poids", value: "5 g – 1000 g" },
+      { label: "Produits compatibles", value: "Riz, lentilles, sucre, céréales, fruits secs, etc." },
+      { label: "Mode de fonctionnement", value: "Semi-automatique" },
+      { label: "Matériau", value: "Structure métallique résistante" },
+      { label: "Utilisation", value: "Emballage alimentaire et agricole" }
     ]
   }
 ];
