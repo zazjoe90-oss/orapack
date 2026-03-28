@@ -8,6 +8,18 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  // Handle body scroll lock
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { name: "Accueil", href: "/" },
     { 
@@ -38,72 +50,74 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-black/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link to="/">
-            <Logo />
-          </Link>
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-black/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            <Link to="/">
+              <Logo />
+            </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <div key={link.name} className="relative group">
-                {link.subItems ? (
-                  <>
+            {/* Desktop Nav */}
+            <div className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <div key={link.name} className="relative group">
+                  {link.subItems ? (
+                    <>
+                      <Link
+                        to={link.href}
+                        className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
+                          location.pathname === link.href ? "text-brand-red" : ""
+                        }`}
+                      >
+                        {link.name} <ChevronDown size={14} className="group-hover:rotate-180 transition-transform" />
+                      </Link>
+                      <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0 border border-black/5">
+                        {link.subItems.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            to={sub.href}
+                            className="block px-6 py-2 text-sm font-medium hover:bg-brand-red/5 hover:text-brand-red transition-colors"
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
                     <Link
                       to={link.href}
-                      className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
-                        location.pathname === link.href ? "text-brand-red" : ""
+                      className={`text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
+                        location.pathname === link.href || (link.href === "/accessoires" && location.pathname.startsWith("/accessoires")) ? "text-brand-red" : ""
                       }`}
                     >
-                      {link.name} <ChevronDown size={14} className="group-hover:rotate-180 transition-transform" />
+                      {link.name}
                     </Link>
-                    <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0 border border-black/5">
-                      {link.subItems.map((sub) => (
-                        <Link
-                          key={sub.name}
-                          to={sub.href}
-                          className="block px-6 py-2 text-sm font-medium hover:bg-brand-red/5 hover:text-brand-red transition-colors"
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <Link
-                    to={link.href}
-                    className={`text-sm font-semibold uppercase tracking-wider hover:text-brand-red transition-colors ${
-                      location.pathname === link.href || (link.href === "/accessoires" && location.pathname.startsWith("/accessoires")) ? "text-brand-red" : ""
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-            <Link
-              to="/#contact"
-              className="bg-brand-black text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-brand-red transition-all transform hover:scale-105"
-            >
-              Devis Gratuit
-            </Link>
-          </div>
+                  )}
+                </div>
+              ))}
+              <Link
+                to="/#contact"
+                className="bg-brand-black text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-brand-red transition-all transform hover:scale-105"
+              >
+                Devis Gratuit
+              </Link>
+            </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-brand-black"
-              aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
-              aria-expanded={isOpen}
-            >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 text-brand-black"
+                aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+                aria-expanded={isOpen}
+              >
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Nav */}
       <AnimatePresence>
@@ -113,9 +127,9 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-50 md:hidden bg-white flex flex-col"
+            className="fixed inset-0 left-0 top-0 z-[100] md:hidden bg-white flex flex-col w-full h-full"
           >
-            <div className="flex justify-between items-center h-20 px-4 border-b border-black/5">
+            <div className="flex justify-between items-center h-20 px-4 border-b border-black/5 bg-white">
               <Logo />
               <button
                 onClick={() => setIsOpen(false)}
@@ -125,7 +139,7 @@ export default function Navbar() {
               </button>
             </div>
             
-            <div className="flex-grow overflow-y-auto px-6 py-10 space-y-8">
+            <div className="flex-grow overflow-y-auto px-6 py-10 space-y-8 bg-white">
               {navLinks.map((link, index) => (
                 <motion.div 
                   key={link.name}
@@ -169,7 +183,7 @@ export default function Navbar() {
               ))}
             </div>
 
-            <div className="p-6 border-t border-black/5">
+            <div className="p-6 border-t border-black/5 bg-white">
               <Link
                 to="/#contact"
                 onClick={() => setIsOpen(false)}
@@ -181,6 +195,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 }
