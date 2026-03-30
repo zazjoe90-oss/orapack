@@ -48,13 +48,13 @@ export default function QuickContact() {
                 </div>
               </a>
               
-              <a href="mailto:contact@orapack.ma" className="flex items-center gap-4 p-4 rounded-2xl bg-black/5 hover:bg-brand-red hover:text-white transition-all group">
+              <a href="mailto:contact@orapack.net" className="flex items-center gap-4 p-4 rounded-2xl bg-black/5 hover:bg-brand-red hover:text-white transition-all group">
                 <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-red group-hover:bg-white/20 group-hover:text-white">
                   <Mail size={20} />
                 </div>
                 <div>
                   <div className="text-[10px] font-bold uppercase tracking-widest opacity-60">Email</div>
-                  <div className="font-bold">contact@orapack.ma</div>
+                  <div className="font-bold">contact@orapack.net</div>
                 </div>
               </a>
 

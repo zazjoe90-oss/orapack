@@ -30,7 +30,7 @@ export default function BlogPostPage() {
       <Helmet>
         <title>{post.title} | Blog ORA PACK</title>
         <meta name="description" content={post.excerpt} />
-        <link rel="canonical" href={`https://orapack.ma/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://orapack.net/blog/${post.slug}`} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.image} />

@@ -17,7 +17,7 @@ export default function Home() {
         <title>ORA PACK | N°1 du Packaging au Maroc - Ensacheuses Verticales & Automatiques</title>
         <meta name="description" content="ORA PACK est le leader marocain de la fabrication de machines d'emballage automatiques. Spécialiste des ensacheuses verticales, peseuses et lignes de conditionnement à Casablanca. Qualité certifiée et SAV réactif." />
         <meta name="keywords" content="packaging maroc, emballage maroc, ensacheuse verticale, machine emballage casablanca, ORA PACK, conditionnement automatique, ensacheuse à vis, ensacheuse pondérale, convoyeur industriel maroc" />
-        <link rel="canonical" href="https://orapack.ma/" />
+        <link rel="canonical" href="https://orapack.net/" />
         
         {/* LCP Optimization: Preload Hero Image */}
         <link 
@@ -35,7 +35,7 @@ export default function Home() {
         <meta property="og:description" content="Découvrez nos solutions de packaging innovantes fabriquées au Maroc. Performance, précision et fiabilité pour votre ligne de production." />
         <meta property="og:image" content="https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://orapack.ma/" />
+        <meta property="og:url" content="https://orapack.net/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ORA PACK | Leader de l'Emballage au Maroc" />
         <meta name="twitter:description" content="Fabricant de machines d'emballage de haute précision à Casablanca." />
@@ -50,8 +50,8 @@ export default function Home() {
             "@type": "LocalBusiness",
             "name": "ORA PACK",
             "image": "https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg",
-            "@id": "https://orapack.ma",
-            "url": "https://orapack.ma",
+            "@id": "https://orapack.net",
+            "url": "https://orapack.net",
             "telephone": "+212661876491",
             "address": {
               "@type": "PostalAddress",

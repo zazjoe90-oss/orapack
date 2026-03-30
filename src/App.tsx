@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import QuickContact from "./components/QuickContact";
 import WhatsAppButton from "./components/WhatsAppButton";
 import CustomCursor from "./components/CustomCursor";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
@@ -22,6 +23,7 @@ export default function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen selection:bg-brand-red selection:text-white bg-white">
         {/* Progress Bar */}
         <motion.div

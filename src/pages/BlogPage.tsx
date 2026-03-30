@@ -14,7 +14,7 @@ export default function BlogPage() {
       <Helmet>
         <title>Blog ORA PACK | Actualités Packaging & Industrie au Maroc</title>
         <meta name="description" content="Suivez les dernières tendances du packaging, de l'automatisation industrielle et de l'innovation technologique au Maroc avec les experts d'ORA PACK." />
-        <link rel="canonical" href="https://orapack.ma/blog" />
+        <link rel="canonical" href="https://orapack.net/blog" />
         <meta property="og:title" content="Blog ORA PACK | Actualités Packaging & Industrie au Maroc" />
         <meta property="og:description" content="Suivez les dernières tendances du packaging, de l'automatisation industrielle et de l'innovation technologique au Maroc." />
         <meta property="og:image" content="https://i.postimg.cc/sgbVzy1r/2.webp" />
