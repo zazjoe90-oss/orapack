@@ -41,6 +41,7 @@ export default function Home() {
         <meta name="twitter:description" content="Fabricant de machines d'emballage de haute précision à Casablanca." />
         <meta name="twitter:image" content="https://i.postimg.cc/pRLwx7fd/enchaseuse-3.jpg" />
         <meta name="robots" content="index, follow" />
+        <meta name="google-site-verification" content="yYJAm_glKuiFRYEkgJCRxh3qnt25OIpTQY5IJqY92DE" />
         
         {/* Structured Data for Local Business */}
         <script type="application/ld+json">

@@ -72,10 +72,10 @@ export default function Products() {
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between mt-auto">
-                    <div className="flex items-center gap-2 text-brand-black font-black uppercase tracking-widest text-xs group/btn">
+                  <div className="mt-auto">
+                    <div className="inline-flex items-center gap-3 bg-brand-black text-white px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest group/btn hover:bg-brand-red transition-all">
                       En savoir plus 
-                      <ArrowUpRight size={18} className="group-hover/btn:text-brand-red transition-colors" />
+                      <ArrowUpRight size={16} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     </div>
                   </div>
                 </div>
