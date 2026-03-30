@@ -73,7 +73,7 @@ export default function Products() {
                   </div>
 
                   <div className="mt-auto">
-                    <div className="inline-flex items-center gap-3 bg-brand-black text-white px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest group/btn hover:bg-brand-red transition-all">
+                    <div className="flex sm:inline-flex items-center justify-center sm:justify-start gap-3 bg-brand-black text-white px-8 py-4 sm:px-6 sm:py-3 rounded-full text-[11px] sm:text-[10px] font-black uppercase tracking-widest group/btn hover:bg-brand-red transition-all w-full sm:w-auto">
                       En savoir plus 
                       <ArrowUpRight size={16} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     </div>
@@ -84,15 +84,15 @@ export default function Products() {
           ))}
         </div>
 
-        <div className="mt-20 text-center">
+        <div className="mt-20 text-center px-4">
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block"
+            className="inline-block max-w-full"
           >
             <Link 
               to="/produits"
-              className="px-12 py-5 bg-brand-black text-white rounded-full font-black uppercase tracking-widest hover:bg-brand-red transition-all shadow-xl shadow-black/10"
+              className="inline-flex items-center justify-center px-8 py-4 sm:px-12 sm:py-5 bg-brand-red text-white rounded-full font-black uppercase tracking-widest hover:bg-brand-black transition-all shadow-xl shadow-brand-red/20 text-[10px] sm:text-sm leading-tight text-center max-w-full"
             >
               Consulter le catalogue complet
             </Link>

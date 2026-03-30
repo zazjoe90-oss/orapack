@@ -110,7 +110,7 @@ export default function ProductsPage() {
             </p>
             <Link 
               to="/#contact"
-              className="inline-block px-12 py-6 bg-brand-red text-white rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-brand-black transition-all shadow-2xl shadow-brand-red/20"
+              className="inline-block px-8 sm:px-12 py-5 sm:py-6 bg-brand-red text-white rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-brand-black transition-all shadow-2xl shadow-brand-red/20 text-xs sm:text-base leading-tight max-w-full"
             >
               Contactez nos experts
             </Link>
